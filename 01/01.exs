@@ -22,10 +22,6 @@ defmodule DayOne do
   def process_adjustment_brute_force(adjustment, history) do
     frequency = adjustment + List.first(history)
 
-#    if rem(Enum.count(history), 999) == 0 do
-#      IO.puts "Iteration #{div(Enum.count(history), 999)}"
-#    end
-
     if Enum.member?(history, frequency) do
       { :suspend, frequency }
     else
